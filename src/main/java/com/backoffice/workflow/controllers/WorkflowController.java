@@ -22,7 +22,7 @@ public class WorkflowController {
 
   @PostMapping
   public void processWorkflow(@RequestBody EnvelopedDataDto<WorkflowDto> workflowBody) {
-    var targetStep = workflowBody.getData().getWorkflow_step().getEnumValue();
+    var targetStep = workflowBody.getData().getWorkflow_step();
     this.workflowService.callTargetWorkflowStepByReflection(targetStep);
   }
 }
