@@ -2,7 +2,7 @@ package com.backoffice.workflow.controllers;
 
 import com.backoffice.workflow.dto.EnvelopedDataDto;
 import com.backoffice.workflow.dto.WorkflowDto;
-import com.backoffice.workflow.services.WorkflowService;
+import com.backoffice.workflow.services.workflow.WorkflowService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,8 +21,7 @@ public class WorkflowController {
   }
 
   @PostMapping
-  public void processWorkflow(@RequestBody EnvelopedDataDto<WorkflowDto> workflowBody) {
-    var targetStep = workflowBody.getData().getWorkflow_step();
-    this.workflowService.callTargetWorkflowStepByReflection(targetStep);
+  public void processWorkflowToSaveCustomerDefinitely(@RequestBody EnvelopedDataDto<WorkflowDto> workflowBody) {
+    this.workflowService.callTargetWorkflowStepByReflection(workflowBody.getData());
   }
 }

@@ -2,11 +2,10 @@ package com.backoffice.workflow.domains.enums;
 
 public enum WorkflowStepsEnum {
 
-  //SERVICE_PATH            ("com.backoffice.workflow.services"),
-  PERSONAL_REGISTRATION   ("com.backoffice.workflow.services.PersonalRegistrationService"),
-  EMAIL_REGISTRATION      ("com.backoffice.workflow.services.EmailRegistrationService"),
-  CELLPHONE_REGISTRATION  ("com.backoffice.workflow.services.CellPhoneRegistrationService"),
-  ADDRESS_REGISTRATION    ("com.backoffice.workflow.services.AddressRegistrationService");
+  PERSONAL_REGISTRATION   ("com.backoffice.workflow.services.workflow.PersonalRegistrationWorkflowService"),
+  EMAIL_REGISTRATION      ("com.backoffice.workflow.services.workflow.EmailRegistrationWorkflowService"),
+  CELLPHONE_REGISTRATION  ("com.backoffice.workflow.services.workflow.CellPhoneRegistrationWorkflowService"),
+  ADDRESS_REGISTRATION    ("com.backoffice.workflow.services.workflow.AddressRegistrationWorkflowService");
 
   private final String step;
 

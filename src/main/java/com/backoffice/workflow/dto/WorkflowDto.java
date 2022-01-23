@@ -15,8 +15,8 @@ import lombok.Setter;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class WorkflowDto {
 
-  @JsonProperty(value = "step")
-  WorkflowStepsEnum workflow_step;
+  @JsonProperty(value = "workflow_step")
+  WorkflowStepsEnum workflowStep;
 
   @JsonProperty(value = "workflow_token")
   String workflowToken;

@@ -12,18 +12,17 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class CellPhoneRegistrationDto extends WorkflowDto {
+public class EmailInformationDto extends WorkflowDto {
 
-  @JsonProperty(value = "id_cellphone_registration")
-  Long idCellphoneRegistration;
+  @JsonProperty(value = "id_email")
+  Long idEmail;
 
-  @JsonProperty(value = "cellphone_token")
-  String cellphoneToken;
+  @JsonProperty(value = "token")
+  String token;
 
-  @JsonProperty(value = "cellphone")
-  String cellphone;
+  @JsonProperty(value = "email")
+  String email;
 
-  @JsonProperty(value = "main_cellphone")
-  boolean mainCellphone;
-
+  @JsonProperty(value = "is_main_email")
+  boolean isMainEmail;
 }

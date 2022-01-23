@@ -1,8 +1,8 @@
 package com.backoffice.workflow.services.interfaces;
 
-import com.backoffice.workflow.domains.enums.WorkflowStepsEnum;
+import com.backoffice.workflow.dto.WorkflowDto;
 
 public interface WorkflowServiceInterface {
 
-  void callTargetWorkflowStepByReflection(WorkflowStepsEnum targetStep);
+  void callTargetWorkflowStepByReflection(WorkflowDto workflowBody);
 }

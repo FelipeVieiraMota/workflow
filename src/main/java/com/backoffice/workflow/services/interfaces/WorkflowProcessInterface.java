@@ -1,6 +1,7 @@
 package com.backoffice.workflow.services.interfaces;
 
-public interface WorkflowProcessInterface <TParameters> {
+import com.backoffice.workflow.domains.enums.WorkflowStepsEnum;
 
-  void process(TParameters parameters);
+public interface WorkflowProcessInterface <TParameters, TResult> {
+  TResult process(TParameters parameters);
 }

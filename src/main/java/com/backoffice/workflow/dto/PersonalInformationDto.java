@@ -12,13 +12,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class PersonalRegistrationDto extends WorkflowDto {
+public class PersonalInformationDto extends WorkflowDto {
 
   @JsonProperty(value = "id_customer")
   Long idCustomer;
 
-  @JsonProperty(value = "customer_token")
-  String customerToken;
+  @JsonProperty(value = "token")
+  String token;
 
   @JsonProperty(value = "first_name")
   String firstName;

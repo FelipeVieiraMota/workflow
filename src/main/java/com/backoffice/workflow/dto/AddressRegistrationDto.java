@@ -14,12 +14,12 @@ import lombok.Setter;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class AddressRegistrationDto extends WorkflowDto {
 
-  @JsonProperty(value = "id_address_registration")
-  Long idAddressRegistration;
+  @JsonProperty(value = "id_address")
+  Long idAddress;
 
-  @JsonProperty(value = "address_token")
-  String AddressToken;
+  @JsonProperty(value = "token")
+  String token;
 
-  @JsonProperty(value = "main_address")
-  boolean mainAddress;
+  @JsonProperty(value = "is_main_address")
+  boolean isMainAddress;
 }
